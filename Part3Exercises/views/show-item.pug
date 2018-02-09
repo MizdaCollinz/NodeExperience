@@ -1,0 +1,12 @@
+extends base.pug
+
+block content
+    p Displaying a single item
+    p &nbsp; 
+        span Name: #{item.name} 
+        span &amp; Price: #{item.price}
+    form(action=`/items/${item.name}/edit`)
+        input(type="submit" value="Edit this item")
+    form(action=`/items/${item.name}?_method=DELETE` method="POST")
+        input(type="submit" value="Delete this item")
+    

@@ -1,0 +1,10 @@
+extends base.pug
+
+block content
+    h2 Add a new item to the cart Name - Price
+    form(action="/items" method="post")
+        input(type="text" name="name")
+        span &nbsp;
+        input(type="text" name="price")
+        span &nbsp;
+        input(type="submit" value="Add to cart")
